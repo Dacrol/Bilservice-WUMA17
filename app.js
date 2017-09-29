@@ -13,6 +13,18 @@ app.get('/', function (req, res) {
     res.render('home');
 });
 
+app.get('/modeller', function (req, res) {
+    res.render('carmodels');
+});
+
+app.get('/priser', function (req, res) {
+    res.render('prices');
+});
+
+app.get('/verkstad', function (req, res) {
+    res.render('workshops');
+});
+
 app.use(express.static('public/'));
 
 app.listen(3000, function () {
