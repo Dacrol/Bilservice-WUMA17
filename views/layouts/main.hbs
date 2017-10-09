@@ -5,23 +5,42 @@
     <title>Bilservice</title>
     {{!-- <link href="/css/meyer-reset.css" rel="stylesheet"> --}}
     <link href="/css/styles.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Droid+Sans" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Droid+Sans|Source+Sans+Pro:600" rel="stylesheet">
 </head>
 
 <body>
     <div class="header-container">
         <header class="wrapper clearfix">
-            <img class="title" src="/img/logo-white.png" alt="Bilservice">
+            <a href="/">
+            <img class="logo" src="/img/logo-white.png" alt="Bilservice">
+            </a>
             <nav>
                 <ul>
                     <li>
-                        <a href="#">Hem</a>
+                        <a href="/">Hem</a>
                     </li>
                     <li>
-                        <a href="#">Bilservice</a>
+                        <a href="/service">Bilservice</a>
                     </li>
                     <li>
-                        <a href="#">nav ul li a</a>
+                        <a href="/verkstad">Verkstäder</a>
+                    </li>
+                    <li>
+                        <a class="dropdown" href="/modeller">Bilmodeller</a>
+                        <ul>
+                            <li>
+                                <a href="/modell/audi">Audi</a>
+                            </li>
+                            <li>
+                                <a href="/modell/bmw">BMW</a>
+                            </li>
+                            <li>
+                                <a href="/modell/volvo">Volvo</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="/priser">Priser</a>
                     </li>
                 </ul>
             </nav>
@@ -29,9 +48,9 @@
     </div>
 
     <div class="main-container">
-        <div class="main wrapper clearfix">
+        <main class="main wrapper clearfix">
             {{{body}}}
-        </div>
+        </main>
     </div>
 
     <div class="footer-container">

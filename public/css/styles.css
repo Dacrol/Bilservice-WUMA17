@@ -1,26 +1,16 @@
+html {
+    position: relative;
+    min-height: 100%;
+  }
+
 body {
     font: 16px/26px 'Droid Sans', sans-serif, Arial;
-    margin: 0;
-}
-
-fieldset {
-    border: 0;
-    margin: 0;
-    padding: 0;
-}
-
-textarea {
-    resize: vertical;
+    margin: 0 0 120px;
 }
 
 .wrapper {
     width: 92%;
     margin: 0 4%;
-}
-
-.header-container {
-    border-bottom: 12px solid #ff9900;
-    position: relative;
 }
 
 .footer-container,
@@ -34,11 +24,21 @@ textarea {
     background: #383838;
 }
 
+.header-container {
+    border-bottom: 12px solid #ff9900;
+    position: relative;
+    background-image: url(/img/service-3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
 .logo {
     margin: 0 auto;
     display: block;
     padding: 10px 0 20px;
 }
+
 
 /* Mobile-first menu */
 
@@ -52,11 +52,9 @@ nav a {
     display: block;
     margin-bottom: 10px;
     padding: 15px 0;
-
     text-align: center;
+    font: 16px/22px 'Source Sans Pro', Arial, sans-serif;
     text-decoration: none;
-    font-weight: bold;
-
     color: white;
     background: #6b6b6b;
 }
@@ -85,67 +83,108 @@ nav a:hover {
 .main aside {
     color: white;
     padding: 0px 4% 10px;
+    margin: 5% 10%;
+}
+
+.footer-container{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: 100px;
 }
 
 .footer-container footer {
     color: white;
-    padding: 20px 0;
+    padding: 20px 0 0;
 }
+
 
 /* Medium width */
 
 @media only screen and (min-width: 575px) {
-
     nav a {
         width: 86px;
-        margin: 0 4px;
-        padding: 14px 3%;
+        margin: 0 1px;
+        padding: 10px 4px;
         margin-bottom: 0;
     }
-
     nav li {
         display: inline-block;
         vertical-align: bottom;
     }
-
     nav li:first-child a {
         margin-left: 0;
     }
-
     nav li:last-child a {
         margin-right: 0;
     }
-
     nav {
         margin: 0 auto;
         text-align: center;
     }
-
+    .active {
+        position: relative;
+    }
+    .active:after {
+        content: "";
+        position: absolute;
+        bottom: -44px;
+        left: 50%;
+        transform: translateX(-50%);
+        border: 22px solid transparent;
+        border-top-color: #ff9900;
+    }
+    .dropdown {
+        position: relative;
+    }
+    .dropdown:after {
+        content: "";
+        background-color: #6b6b6b;
+        position: absolute;
+        display: block;
+        width: 30px;
+        left: 50%;
+        margin-left: -15px;
+        height: 15px;
+        border-radius: 0 0 10px 10px;
+        bottom: -3px;
+    }
 }
+
 
 /* Full width */
 
-@media only screen and (min-width: 1024px) {
-
+@media only screen and (min-width: 892px) {
     .wrapper {
-        width: 922px; 
+        width: 90%;
         margin: 0 auto;
     }
-
+    .header-container {
+        height: 136px;
+    }
     nav {
         float: right;
-        width: 50%;
         position: absolute;
-        right: 0;
+        right: 30px;
         bottom: 0;
     }
-
     .logo {
         display: inline;
         padding: 8px 0;
+        position: absolute;
+        bottom: 0;
+    }
+    .main article {
+        float: left;
+        width: 57%;
+    }
+    .main aside {
+        float: right;
+        width: 38%;
+        margin: 2% auto;
     }
 }
-
 
 .clearfix:before,
 .clearfix:after {
@@ -161,7 +200,73 @@ nav a:hover {
     *zoom: 1;
 }
 
-.img-side {
-    width: 28%;
-    float: right;
+
+/* 
+Begin Sub menus 
+*/
+
+nav li ul {
+    margin-top: 0;
+    position: absolute;
+    /* stop expanding ancestor elements */
+    display: none;
+    /* initially hide sub menus */
+}
+
+
+/* When hovering over a li with sub menus
+     then show the sub menu */
+
+nav li:hover ul {
+    display: block;
+    width: 30px;
+}
+
+
+/* Select list elements in sub menus */
+
+nav li li {
+    float: none;
+}
+
+
+/* Fix "thick borders" for sub menus */
+
+nav li li a {
+    /* margin-top: -1px; */
+    margin: 0;
+}
+/* 
+End Sub menus 
+*/
+
+
+/* Box Fix */
+
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+aside.prices {
+    display: none;
+}
+
+ul#prices {
+    padding-left: 12px;
+}
+
+.hide-text {
+    display: none;
+}
+
+aside.img-aside {
+    padding: 0;
+}
+
+aside img {
+    width: 100%;
 }
