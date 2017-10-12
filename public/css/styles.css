@@ -308,7 +308,7 @@ End Sub menus
 }
 
 .clearfix {
-    *zoom: 1;
+    *zoom: 1; /* For IE 6/7 only! Include this rule to trigger hasLayout and contain floats. */
 }
 
 aside.prices {
@@ -321,12 +321,16 @@ ul#prices {
 
 ul.list-links {
     list-style-type: none;
-    padding-left: 6px;
+    margin-left: 14px;
 }
 
 ul.list-links a {
     color: white;
     text-decoration: none;
+}
+
+ul.list-links li {
+    margin-top: 6px;
 }
 
 ul.list-links a:visited {
