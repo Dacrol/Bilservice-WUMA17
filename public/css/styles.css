@@ -8,6 +8,32 @@ body {
     margin: 0 0 150px;
 }
 
+ol {
+    list-style-type: decimal
+}
+
+ul {
+    list-style: disc
+}
+
+h4,
+p,
+ul,
+fieldset,
+form,
+ol,
+dl {
+    margin: 1.12em 0
+}
+
+ol,
+ul,
+dir,
+menu,
+dd {
+    margin-left: 40px
+}
+
 .wrapper {
     width: 92%;
     margin: 0 4%;
@@ -99,10 +125,12 @@ nav a:hover {
     padding: 20px 0 0;
 }
 
-.footer-container footer p, .footer-container footer h3{
+.footer-container footer p,
+.footer-container footer h3 {
     margin: 8px;
     text-align: right;
 }
+
 
 /* 
 Begin Sub menus 
@@ -115,27 +143,34 @@ nav li ul {
     /* initially hide sub menus */
 }
 
+
 /* When hovering over a li with sub menus
      then show the sub menu */
+
 nav li:hover ul {
     display: block;
     z-index: 3;
     margin-bottom: 10px;
 }
 
+
 /* Select list elements in sub menus */
+
 nav li li {
     float: none;
 }
 
+
 /* Add some margin while responsive */
+
 nav li li a {
     margin: 0 0 2px 0;
 }
 
-li.dropdown:hover>a{
+li.dropdown:hover>a {
     margin-bottom: 2px;
 }
+
 
 /* 
 End Sub menus 
@@ -145,13 +180,11 @@ End Sub menus
 /* Medium width */
 
 @media only screen and (min-width: 575px) {
-
-    .header-container{
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    .header-container {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
     }
-
     nav a {
         width: 86px;
         margin: 0 1px;
@@ -173,20 +206,19 @@ End Sub menus
         text-align: center;
     }
     nav li:hover ul {
-        width: 30px; 
+        width: 30px;
         margin-bottom: 0;
-    }    
+    }
     li.dropdown:hover>a {
         margin-bottom: 0;
     }
     /* Fix "thick borders" for sub menus */
     nav li li a {
-    margin: 0;
+        margin: 0;
     }
     nav li ul {
         position: absolute;
     }
-
     /* Dropdown drawer-grej */
     .dropdown {
         position: relative;
@@ -315,4 +347,49 @@ aside.img-aside {
 
 aside img {
     width: 100%;
+}
+
+article {
+    padding: 16px;
+}
+
+h1 {
+    font-size: 2em;
+    margin: .67em 0;
+    line-height: normal;
+}
+
+h2 {
+    font-size: 1.5em;
+    margin: .75em 0;
+    line-height: normal;
+}
+
+h3 {
+    font-size: 1.17em;
+    margin: .83em 0;
+    line-height: normal;
+}
+
+h5 {
+    font-size: .83em;
+    margin: 1.5em 0;
+    line-height: normal;
+}
+
+h6 {
+    font-size: .75em;
+    margin: 1.67em 0;
+    line-height: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+b,
+strong {
+    font-weight: bolder;
 }
