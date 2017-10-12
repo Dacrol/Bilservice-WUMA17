@@ -1,8 +1,7 @@
 $(function() {
     markActiveNav();
   });
-
-
+  
 //Markera aktiv navbarlänk
 function markActiveNav() {
     var href = location.href;
@@ -16,6 +15,7 @@ $('.prices-btn').click(function () {
     $('aside.prices').toggle();
     $('.prices-btn .show-text').toggle();
     $('.prices-btn .hide-text').toggle();
+    //Hämta bara en gång
     if ($("ul#prices").children().length == 0) {
         getPrices();
     }
